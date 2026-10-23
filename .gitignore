@@ -1,6 +1,5 @@
+# Private data
 private/
-output/
-
 
 # Python
 __pycache__/
@@ -13,8 +12,9 @@ tempCodeRunnerFile.py
 venv/
 env/
 
-# Secrets / Facebook login session
+# Secrets
 .env
+.env.*
 .envrc
 cookies*.json
 *.cookies
@@ -22,6 +22,7 @@ session/
 
 # Scrape logs
 *.log
+log.txt
 logs/
 
 # Scraped data
@@ -32,6 +33,15 @@ data/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Website (React)
+node_modules/
+website/build/
+website/coverage/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Editor / OS
 .vscode/

@@ -1,0 +1,104 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 150px;
+}
+
+.navbar-brand {
+  position: relative;
+  display: block;
+  padding-bottom: 28px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  display: block;
+  width: 75%;
+  margin-top: 36px;
+  margin-bottom: -2px;
+  margin-left: 20px;
+}
+
+.navbar-title {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+
+  box-sizing: border-box;
+  border: 2px solid #ffe7a0;
+  border-radius: 7px;
+
+  padding: 2px;
+}
+
+.navbar-links {
+  margin: 0;
+  padding: 2px 0 8px;
+  list-style: none;
+  text-align: center;
+  background: var(--content-background);
+  border-radius: 0 0 20px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #00000080, 0 6px 20px #00000030;
+}
+
+.navbar-links a {
+  display: block;
+  margin: 6px 10px;
+  padding: 9px 15px;
+  border-radius: 6px;
+  color: var(--main);
+  background: var(--accent);
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #fff;
+  background: var(--main);
+  transform: translateX(3px);
+}
+
+.navbar-links a.active {
+  color: #fff;
+  background: var(--main);
+  font-weight: bold;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 6px #0006;
+}
+
+@media (max-width: 979px) {
+  .navbar {
+    position: static;
+    width: 100%;
+  }
+
+  .navbar-logo {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .navbar-links {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .navbar-links a {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .navbar-links a:hover {
+    transform: none;
+  }
+
+  .navbar-links a.active {
+    border-left: none;
+    border-top: 4px solid var(--accent);
+  }
+}

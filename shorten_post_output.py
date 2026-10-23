@@ -1,6 +1,8 @@
 import json
 from datetime import datetime, timedelta, timezone
 
+import logger
+
 INPUT_FILE = "output/posts.json"
 OUTPUT_FILE = "output/posts_short.json"
 
@@ -31,4 +33,5 @@ for post in posts:
 with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
     json.dump(short_posts, file, ensure_ascii=False, indent=2)
 
-print(f"Saved {len(short_posts)} post(s) to {OUTPUT_FILE} ({len(posts) - len(short_posts)} skipped)")
+print(f"Shortened {len(short_posts)} post(s) and saved to {OUTPUT_FILE} ({len(posts) - len(short_posts)} skipped)")
+logger.log(f"Shortened {len(short_posts)} post(s) and saved to {OUTPUT_FILE} ({len(posts) - len(short_posts)} skipped)")

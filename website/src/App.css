@@ -1,0 +1,38 @@
+:root {
+  --main: #303137;
+  --accent: #d7de6b;
+  --site-background: #161616;
+  --content-background: #000000;
+}
+
+body {
+  background: var(--site-background);
+  color: #fff;
+}
+
+.App {
+  display: flex;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.App-sidebar {
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.App-content {
+  flex: 1;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+@media (max-width: 979px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .App-sidebar {
+    width: 100%;
+  }
+}
