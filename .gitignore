@@ -1,0 +1,41 @@
+private/
+output/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+tempCodeRunnerFile.py
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets / Facebook login session
+.env
+.envrc
+cookies*.json
+*.cookies
+session/
+
+# Scrape logs
+*.log
+logs/
+
+# Scraped data
+output/
+data/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
