@@ -1,0 +1,98 @@
+.post-card {
+  margin-bottom: 16px;
+  margin-left: 22.5%;
+  margin-right: 22.5%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #242526;
+  color: #e4e6eb;
+  box-shadow: 0 1px 2px #00000066;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.post-avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--main);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.post-author {
+  display: block;
+  color: #e4e6eb;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.post-time {
+  color: #b0b3b8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.post-author:hover,
+.post-time:hover {
+  text-decoration: underline;
+}
+
+.post-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.post-empty {
+  color: #b0b3b8;
+  font-style: italic;
+}
+
+.post-toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #e4e6eb;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post-toggle:hover {
+  text-decoration: underline;
+}
+
+.post-footer {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #3e4042;
+  text-align: center;
+}
+
+.post-footer a {
+  display: block;
+  padding: 6px;
+  border-radius: 4px;
+  color: #b0b3b8;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-footer a:hover {
+  background: #3a3b3c;
+}

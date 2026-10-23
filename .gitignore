@@ -38,6 +38,7 @@ data/
 node_modules/
 website/build/
 website/coverage/
+website/public/post.json
 .eslintcache
 npm-debug.log*
 yarn-debug.log*

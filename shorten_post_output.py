@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 
 import logger
 
-INPUT_FILE = "output/posts.json"
+INPUT_FILE = "output/scraped_posts.json"
 OUTPUT_FILE = "output/posts_short.json"
 
 UTC7 = timezone(timedelta(hours=7))
