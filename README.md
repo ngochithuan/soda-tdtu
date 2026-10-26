@@ -14,6 +14,7 @@ extract logs by page -> main purpose is changing the number of post to suitable 
 If already have post -> skip, not add into data
 
 ## Shorten post output json file
+```json
 {
     "facebookUrl": Page's url,
     "postId": Post id,
@@ -26,3 +27,4 @@ If already have post -> skip, not add into data
     },
     "text": Page's post content,
 },
+```
