@@ -14,7 +14,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "copy-posts": "cp ../output/post.json public/post.json",
+    "copy-posts": "cp ../data/post.json public/post.json",
     "prestart": "npm run copy-posts",
     "start": "react-scripts start",
     "prebuild": "npm run copy-posts",

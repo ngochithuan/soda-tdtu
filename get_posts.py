@@ -6,7 +6,7 @@ from apify_client import ApifyClient
 import logger
 
 POST_NUM = 2
-OUTPUT_FILE = "output/scraped_posts.json"
+OUTPUT_FILE = "data/scraped_posts.json"
 
 load_dotenv()
 api_token = os.getenv("API_TOKEN")

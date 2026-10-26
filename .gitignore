@@ -26,7 +26,6 @@ log.txt
 logs/
 
 # Scraped data
-output/
 data/
 
 # Tool caches
