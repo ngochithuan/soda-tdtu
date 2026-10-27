@@ -1,11 +1,13 @@
 import re
 import pandas as pd
 
+DATASET_FILE='data/dataset.csv'
+
 DT = r'(?:\d{1,2}:\d{2} )?\d{1,2}/\d{1,2}/\d{4}'
-SPAN = rf'{DT}(?: [-–] {DT})?'                 # mốc hoặc khoảng "bắt đầu - kết thúc"
+SPAN = rf'{DT}(?: *[-–] *{DT})?'               # mốc hoặc khoảng "bắt đầu - kết thúc"
 
 ROW = re.compile(
-    r'^(.*),'                                  # content
+    r'^(.*), *(?:[Tt]ừ +)?'                    # content (bỏ qua dấu cách / chữ "Từ" thừa trước event_time)
     rf'({SPAN}(?: ?; ?{SPAN})*)?,'             # event_time: một hoặc nhiều SPAN, cách nhau bởi ";"
     r'("(?:[^"]|"")*"|[^,"]*),'                # location
     r'("(?:[^"]|"")*"|[^,"]*),'                # participant
@@ -13,7 +15,7 @@ ROW = re.compile(
 )
 
 rows = []
-with open('dataset.csv', encoding='utf-8') as f:
+with open(DATASET_FILE, encoding='utf-8') as f:
     next(f)  # bỏ header
     for i, line in enumerate(f, start=2):
         line = line.rstrip('\n')

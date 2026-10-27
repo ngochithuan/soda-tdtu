@@ -7,7 +7,7 @@ function Conduct() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/post.json`)
+    fetch(`${process.env.PUBLIC_URL}/avalible_posts.json`)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
