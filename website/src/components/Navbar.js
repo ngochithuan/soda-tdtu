@@ -1,12 +1,12 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Navbar.css';
 
 const links = [
-  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Conduct', href: '/conduct' },
   { label: 'GPA Calc', href: '/gpa-calc' },
+  { label: 'Settings', href: '/settings' },
 ];
 
 function Navbar() {

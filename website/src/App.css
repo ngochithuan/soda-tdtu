@@ -3,11 +3,42 @@
   --accent: #d7de6b;
   --site-background: #161616;
   --content-background: #000000;
+  --card-background: #242526;
+  --card-hover: #3a3b3c;
+  --border: #3e4042;
+  --heading: #d7de6b;
+  --text: #e4e6eb;
+  --text-muted: #b0b3b8;
+}
+
+/* Light colors: chosen in Settings, or following the system when no theme is chosen */
+:root[data-theme="light"] {
+  --site-background: #f0f2f5;
+  --content-background: #ffffff;
+  --card-background: #f0f2f5;
+  --card-hover: #e4e6eb;
+  --border: #ced0d4;
+  --heading: #303137;
+  --text: #050505;
+  --text-muted: #65676b;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --site-background: #f0f2f5;
+    --content-background: #ffffff;
+    --card-background: #f0f2f5;
+    --card-hover: #e4e6eb;
+    --border: #ced0d4;
+    --heading: #303137;
+    --text: #050505;
+    --text-muted: #65676b;
+  }
 }
 
 body {
   background: var(--site-background);
-  color: #fff;
+  color: var(--text);
 }
 
 /* Navbar column | content column */

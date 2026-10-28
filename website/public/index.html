@@ -12,8 +12,22 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Soda TDTU</title>
+    <script>
+      // Apply the saved theme before React renders to avoid a flash of the wrong colors
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+    <style>
+      body { background: #161616; }
+      :root[data-theme="light"] body { background: #f0f2f5; }
+      @media (prefers-color-scheme: light) {
+        :root:not([data-theme="dark"]) body { background: #f0f2f5; }
+      }
+    </style>
   </head>
-  <body style="background: #161616">
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
